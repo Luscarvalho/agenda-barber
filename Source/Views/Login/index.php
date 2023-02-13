@@ -14,7 +14,7 @@
     <img src="<?= URL_BASE ?>/Source/Styles/img/barber.svg" alt="Barbeiro"/>
 </div>
 <div class="card-login">
-    <form class="card" action="" method="POST">
+    <form class="card" action="<?= URL_BASE; ?>/login" method="POST">
         <h1>LOGIN</h1>
         <div class="input-text">
             <label for="email">Email:</label>
@@ -22,7 +22,7 @@
         </div>
         <div class="input-text">
             <label for="password">Senha:</label>
-            <input type="password" name="Senha" id="password"/>
+            <input type="password" name="password" id="password"/>
         </div>
         <p>Não possui conta? <a href="<?= URL_BASE ?>/register">REGISTRAR</a></p>
         <input type="submit" value="ENTRAR"/>

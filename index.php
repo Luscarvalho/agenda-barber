@@ -35,10 +35,12 @@ $router->get("/{sector}", "Web:contact");
 //Login
 $router->group("login");
 $router->get("/", "Web:login");
+$router->post("/", "Web:login");
 
 //Register
 $router->group("register");
 $router->get("/", "Web:register");
+$router->post("/", "Web:register");
 
 //Erros
 $router->group("oops");
