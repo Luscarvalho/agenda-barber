@@ -43,6 +43,8 @@ class Web
             if ($userRegister) {
                 header("Location: $url/login");
             } else {
+                $_SESSION['msg'] = "As senhas não correspondem!";
+                $_SESSION['dados'] = ["nome"=>$data["nome"], "email" => $data["email"]];
                 header("Location: $url/register");
             }
             exit;

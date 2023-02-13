@@ -33,7 +33,7 @@ class User extends ConnectDB
                 VALUES ('$userName', '$userEmail', '$userPassword', '$userRepPassword', DEFAULT);");
                 return true;
             } else{
-                echo "As senhas não sao iguais!";
+                return false;
             }
         }catch (PDOException $e){
             echo 'Error!' . $e->getMessage();
