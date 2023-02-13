@@ -2,7 +2,6 @@
 
 namespace Source\Models;
 
-use mysql_xdevapi\Result;
 use Source\ConnectDB;
 
 use PDOException;
@@ -58,43 +57,43 @@ class User extends ConnectDB
         }
     }
 
-    public function listBarber()
+    public function listBarber(): false|array
     {
         $sqlSelect = $this->connection->query("SELECT nome FROM usuarios WHERE tipo = 'admin';");
         if ($sqlSelect->rowCount() != 0) {
             return $sqlSelect->fetchAll();
         } else {
-            echo "Nenhum administrador encontrado.";
+            return false;
         }
     }
 
-    public function listCorte()
+    public function listCorte(): false|array
     {
         $sqlSelect = $this->connection->query("SELECT nome, valor FROM tipos_de_corte;");
         if ($sqlSelect->rowCount() != 0) {
             return $sqlSelect->fetchAll();
         } else {
-            echo "Nenhum corte encontrado.";
+            return false;
         }
     }
 
-    public function listTimer()
+    public function listTimer(): false|array
     {
         $sqlSelect = $this->connection->query("SELECT nome FROM tipos_de_corte;");
         if ($sqlSelect->rowCount() != 0) {
             return $sqlSelect->fetchAll();
         } else {
-            echo "Nenhum corte encontrado.";
+            return false;
         }
     }
 
-    public function fillProfile()
+    public function fillProfile(): false|array
     {
         $sqlSelect = $this->connection->query("SELECT nome, email, senha, repetir_senha FROM usuarios where nome='lusca';");
         if ($sqlSelect->rowCount() != 0) {
             return $sqlSelect->fetchAll();
         } else {
-            echo "Nenhum corte encontrado.";
+            return false;
         }
     }
 }

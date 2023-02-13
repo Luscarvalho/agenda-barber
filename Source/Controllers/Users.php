@@ -10,17 +10,15 @@ class Users
     {
         require __DIR__ . "/../Views/User-home/index.php";
     }
-    public function schedules($data): void
+
+    public function schedules(): void
     {
         $url = URL_BASE;
-        if ($_SERVER["REQUEST_METHOD"] == "GET") {
-            $listtime = (new User)->listTimer();
-            $listbarber = (new User)->listBarber();
-            $listcorte = (new User)->listCorte();
-            require __DIR__ . "/../Views/User-time/index.php";
-        } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        }
+        $listtime = (new User)->listTimer();
+        $listbarber = (new User)->listBarber();
+        $listcorte = (new User)->listCorte();
+        require __DIR__ . "/../Views/User-time/index.php";
     }
 
     public function mySchedule(): void
@@ -28,7 +26,7 @@ class Users
         require __DIR__ . "/../Views/User-schedule/index.php";
     }
 
-    public function profile(array $data): void
+    public function profile(): void
     {
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $fillprofile = (new User)->fillProfile();
