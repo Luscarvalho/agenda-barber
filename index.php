@@ -17,6 +17,11 @@ $router->namespace("Source\Controllers");
 //Home admin
 $router->group("admin");
 $router->get("/", "Admin:home");
+$router->get("/register", "Admin:register");
+$router->get("/horarios", "Admin:schedules");
+$router->get("/agenda", "Admin:schedule");
+$router->get("/perfil", "Admin:profile");
+
 
 /*
  * User
@@ -26,13 +31,6 @@ $router->get("/", "Admin:home");
 $router->group(null);
 $router->get("/", "Web:home");
 //$router->get("/{filter}", "Web:home");
-
-//Contato
-$router->group("contact");
-$router->get("/", "Web:contact");
-$router->post("/", "Web:contact");
-$router->delete("/", "Web:contact");
-$router->get("/{sector}", "Web:contact");
 
 //Login
 $router->group("login");

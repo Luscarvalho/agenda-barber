@@ -2,15 +2,12 @@
 
 namespace Source\Controllers;
 
-use Source\Models\Login;
 use Source\Models\User;
 
 class Web
 {
-    public function home($data): void
+    public function home(): void
     {
-        echo "<h1>Home User</h1>";
-        var_dump($data);
         require __DIR__ . "/../Views/User-home/index.php";
     }
 
@@ -51,15 +48,7 @@ class Web
         }
     }
 
-    public function contact($data): void
-    {
-
-        echo "<h1>loginnn</h1>";
-        var_dump($data);
-        require __DIR__ . "/../Views/Contact/index.php";
-    }
-
-    public function error($data): void
+    public function error(): void
     {
         require __DIR__ . "/../Views/Error-page/index.php";
     }
