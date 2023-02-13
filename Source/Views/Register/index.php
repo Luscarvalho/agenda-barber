@@ -14,23 +14,23 @@
     <img src="<?= URL_BASE ?>/Source/Styles/img/barber.svg" alt="Barbeiro"/>
 </div>
 <div class="card-login">
-    <form class="card" action="index.php" method="POST">
+    <form class="card" action="<?= URL_BASE; ?>/register" method="POST">
         <h1>CADASTRO</h1>
         <div class="input-text">
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome"/>
+            <input type="text" name="nome" id="nome" required/>
         </div>
         <div class="input-text">
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email"/>
+            <input type="email" name="email" id="email" required/>
         </div>
         <div class="input-text">
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha"/>
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password" required/>
         </div>
         <div class="input-text">
-            <label for="rep-senha">Repetir Senha:</label>
-            <input type="password" name="rep-senha" id="rep-senha"/>
+            <label for="rep-password">Repetir Senha:</label>
+            <input type="password" name="rep-password" id="rep-password" required/>
         </div>
         <p>Já possui conta? <a href="<?= URL_BASE ?>/login">ENTRAR</a></p>
         <input type="submit" name="submit" value="CADASTRAR"/>

@@ -3,6 +3,8 @@ require __DIR__."/Vendor/autoload.php";
 
 use CoffeeCode\Router\Router;
 
+session_start();
+
 $router = new Router(URL_BASE);
 
 //Controllers

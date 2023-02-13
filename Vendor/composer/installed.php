@@ -3,7 +3,7 @@
         'name' => 'luscarvalho/agenda-barber',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'e195a4442e301529b3d61743b476be4c45f0ed42',
+        'reference' => '3a47f30401e6b726a1d65b38477a4632d806f946',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'luscarvalho/agenda-barber' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'e195a4442e301529b3d61743b476be4c45f0ed42',
+            'reference' => '3a47f30401e6b726a1d65b38477a4632d806f946',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -104,6 +104,11 @@ body {
   outline: none;
 }
 
+.password-error{
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
 .card p,
 .card a {
   margin-top: 20px;
