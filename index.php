@@ -18,7 +18,9 @@ $router->namespace("Source\Controllers");
 $router->group("admin");
 $router->get("/", "Admin:home");
 $router->get("/register", "Admin:register");
+$router->post("/register", "Admin:register");
 $router->get("/horarios", "Admin:schedules");
+$router->post("/horarios", "Admin:schedules");
 $router->get("/agenda", "Admin:schedule");
 $router->get("/perfil", "Admin:profile");
 
@@ -29,8 +31,15 @@ $router->get("/perfil", "Admin:profile");
 
 //Home
 $router->group(null);
-$router->get("/", "Web:home");
-//$router->get("/{filter}", "Web:home");
+$router->get("/", "Users:home");
+$router->get("/agendar", "Users:schedules");
+$router->post("/agendar", "Users:schedules");
+$router->get("/agenda", "Users:schedule");
+$router->get("/perfil", "Users:profile");
+
+/*
+ * Gerais
+ */
 
 //Login
 $router->group("login");

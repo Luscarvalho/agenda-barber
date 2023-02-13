@@ -40,4 +40,20 @@ class User extends ConnectDB
             return false;
         }
     }
+
+    public function registerAdmin($userName, $userEmail, $userPassword, $userRepPassword): bool
+    {
+        try {
+            if ($userPassword == $userRepPassword){
+                $this->connection->query("INSERT INTO usuarios (nome, email, senha, repetir_senha, tipo)
+                VALUES ('$userName', '$userEmail', '$userPassword', '$userRepPassword', 'admin');");
+                return true;
+            } else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo 'Error!' . $e->getMessage();
+            return false;
+        }
+    }
 }

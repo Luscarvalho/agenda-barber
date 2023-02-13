@@ -13,35 +13,29 @@
 </head>
 <body>
 <header>
-    <a href="index.html">Logo</a>
+    <a href="#">Logo</a>
     <ul>
-        <li><a href="login.html">Sair</a></li>
+        <li><a href="#">Sair</a></li>
     </ul>
 </header>
 <section class="options">
-    <a href="#">
+    <a href="<?= URL_BASE ?>/agendar">
         <span style="color: white">
           <i class="fa-regular fa-clock fa-5x"></i>
         </span>
-        <p>Horários</p>
+        <p>Agendar</p>
     </a>
-    <a href="#">
+    <a href="<?= URL_BASE ?>/agenda">
         <span style="color: white">
           <i class="fa-regular fa-calendar-check fa-5x"></i>
         </span>
         <p>Minha Agenda</p>
     </a>
-    <a href="#">
+    <a href="<?= URL_BASE ?>/perfil">
         <span style="color: white">
           <i class="fa-regular fa-user fa-5x"></i>
         </span>
         <p>Perfil</p>
-    </a>
-    <a href="#">
-        <span style="color: white">
-          <i class="fa-regular fa-user fa-5x"></i>
-        </span>
-        <p>Cadastrar</p>
     </a>
 </section>
 <footer>

@@ -6,11 +6,6 @@ use Source\Models\User;
 
 class Web
 {
-    public function home(): void
-    {
-        require __DIR__ . "/../Views/User-home/index.php";
-    }
-
     public function login($data): void
     {
         $url = URL_BASE;
@@ -44,11 +39,10 @@ class Web
                 $_SESSION['dados'] = ["nome"=>$data["nome"], "email" => $data["email"]];
                 header("Location: $url/register");
             }
-            exit;
         }
     }
 
-    public function error(): void
+    public function error($data): void
     {
         require __DIR__ . "/../Views/Error-page/index.php";
     }
