@@ -1,0 +1,27 @@
+{
+  "name": "luscarvalho/agenda-barber",
+  "description": "Aplicativo de Barbeiro",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "email": "luscarvalhox@gmail.com",
+      "name": "Luscarvalho",
+      "role": "Developer"
+    }
+  ],
+  "config": {
+    "vendor-dir": "Vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "Source/"
+    },
+    "files": [
+      "Source/Config.php"
+    ]
+  },
+  "require": {
+    "coffeecode/router": "2.0.2"
+  }
+}

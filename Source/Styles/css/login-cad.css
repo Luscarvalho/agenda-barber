@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-color: #393e46;
+  --second-color: #bcbec1;
+  --text-color: #eeeeee;
+  --text-color-dark: #222831;
+  --main-dark: #222831;
+}
+
+/* GERAL */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+
+  font-family: "Poppins";
+
+  background-color: var(--main-color);
+}
+
+/* IMAGEM */
+
+.image-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  height: 100%;
+}
+
+.image-login img {
+  width: 80%;
+
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+}
+
+/* CARD-LOGIN */
+
+.card-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+
+  width: 50%;
+  border-radius: 20px;
+
+  color: var(--second-color);
+}
+
+.card label {
+  font-weight: bold;
+
+  margin: 15px 0 5px 0;
+}
+
+.input-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.card input {
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  border: 3px solid var(--second-color);
+  color: var(--text-color);
+
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  padding: 20px;
+
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.card p,
+.card a {
+  margin-top: 20px;
+
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.card a {
+  font-weight: bolder;
+}
+
+.card input[type="submit"] {
+  box-sizing: border-box;
+  background-color: var(--main-dark);
+  color: var(--text-color);
+
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+
+  font-size: 1.2rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+
+  cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-login {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-login {
+    width: 100%;
+  }
+}
