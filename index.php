@@ -34,8 +34,9 @@ $router->group(null);
 $router->get("/", "Users:home");
 $router->get("/agendar", "Users:schedules");
 $router->post("/agendar", "Users:schedules");
-$router->get("/agenda", "Users:schedule");
-$router->get("/perfil", "Users:profile");
+$router->get("/agenda", "Users:mySchedule");
+$router->get("/perfil/{id}", "Users:profile");
+$router->post("/perfil/{id}", "Users:profile");
 
 /*
  * Gerais

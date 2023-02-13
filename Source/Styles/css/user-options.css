@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --main-color: #393e46;
+    --second-color: #bcbec1;
+    --text-color: #eeeeee;
+    --text-color-dark: #222831;
+    --main-dark: #222831;
+}
+
+/* GERAL */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+
+    font-family: "Poppins";
+
+    background-color: var(--main-color);
+}
+
+/* MENU */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem;
+    width: 100%;
+    height: 10%;
+
+    background-color: var(--main-dark);
+}
+
+header > a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+    color: var(--text-color);
+}
+
+header li {
+    text-decoration: none;
+    list-style: none;
+
+    color: var(--text-color);
+}
+
+header li a {
+    color: var(--text-color);
+
+    padding: 10px 30px;
+    border-radius: 10px;
+
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header li a:hover {
+    background-color: var(--main-color);
+}
+
+/* SECTION */
+.form-agendar {
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 50px;
+}
+
+.form-editar {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 50px;
+    margin: 30px 0;
+}
+
+.card {
+    width: 40%;
+    color: var(--text-color);
+}
+
+.card h1 {
+    text-align: center;
+}
+
+.card label {
+    font-weight: bold;
+
+    margin: 15px 0 5px 0;
+}
+
+.card p {
+    font-weight: bold;
+    margin: 15px 0 0 0;
+    font-size: 1.2rem;
+}
+
+.card select {
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    border: 3px solid var(--second-color);
+    color: var(--text-color);
+
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    padding: 20px;
+
+    font-size: 1rem;
+    outline: none;
+}
+
+.card input[type="submit"] {
+    box-sizing: border-box;
+    background-color: var(--main-dark);
+    color: var(--text-color);
+
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+
+    font-size: 1.2rem;
+    font-weight: bolder;
+    letter-spacing: 5px;
+
+    cursor: pointer;
+}
+
+.card input {
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    border: 3px solid var(--second-color);
+    color: var(--text-color);
+
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    padding: 20px;
+
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.input-text {
+    display: flex;
+    flex-direction: column;
+}
+/* FOOTER */
+
+footer {
+    height: 10%;
+    background-color: var(--main-dark);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text-color);
+}
+
+footer p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* MEDIAS QUERRY */
+
+@media screen and (max-width: 480px) {
+}
