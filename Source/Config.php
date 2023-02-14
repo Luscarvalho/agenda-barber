@@ -4,3 +4,4 @@ const HOST = 'localhost';
 const DBNAME = 'barber';
 const USER = 'root';
 const PASSWORD = '';
+$_SESSION["logado"] = false;

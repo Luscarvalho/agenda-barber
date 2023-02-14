@@ -6,6 +6,14 @@ use Source\Models\User;
 
 class Users
 {
+    public function __construct()
+    {
+        $url = URL_BASE;
+        if (!$_SESSION["logado"]){
+            header("Location: $url/login");
+        }
+    }
+
     public function home(): void
     {
         require __DIR__ . "/../Views/User-home/index.php";

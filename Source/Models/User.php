@@ -15,11 +15,13 @@ class User extends ConnectDB
 
     public function login($userLogin, $userPassword)
     {
-        $sqlSelect = $this->connection->query("SELECT email, senha, tipo FROM usuarios
+        $sqlSelect = $this->connection->query("SELECT id, email, senha, tipo FROM usuarios
                     WHERE email = '$userLogin' AND senha = '$userPassword'");
-
         if ($sqlSelect->rowCount() != 0) {
-            return $sqlSelect->fetch()["tipo"];
+            $user = $sqlSelect->fetch();
+            $_SESSION["id_user"] = $user["id"];
+            $_SESSION["tipo_user"] = $user["tipo"];
+            return $user["tipo"];
         } else {
             return false;
         }

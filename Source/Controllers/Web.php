@@ -14,12 +14,12 @@ class Web
         } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
             $userLogin = (new User)->login($data["email"], $data["password"]);
             if ($userLogin == "admin") {
+                $_SESSION["logado"] = true;
                 header("Location: $url/admin");
             } elseif ($userLogin == "user") {
+                $_SESSION["logado"] = true;
                 header("Location: $url/");
             } else {
-                $_SESSION['msg'] = "Email ou senha errados!";
-                $_SESSION['dados'] = ["email" => $data["email"], "senha" => $data["password"]];
                 header("Location: $url/login");
             }
         }
@@ -35,11 +35,16 @@ class Web
             if ($userRegister) {
                 header("Location: $url/login");
             } else {
-                $_SESSION['msg'] = "As senhas não correspondem!";
-                $_SESSION['dados'] = ["nome"=>$data["nome"], "email" => $data["email"]];
                 header("Location: $url/register");
             }
         }
+    }
+
+    public function logout(): void
+    {
+        $url = URL_BASE;
+        $_SESSION["logado"] = false;
+        header("Location: $url/login");
     }
 
     public function error($data): void

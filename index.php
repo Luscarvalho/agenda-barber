@@ -47,6 +47,9 @@ $router->group("login");
 $router->get("/", "Web:login");
 $router->post("/", "Web:login");
 
+$router->group("logout");
+$router->get("/", "Web:logout");
+
 //Register
 $router->group("register");
 $router->get("/", "Web:register");

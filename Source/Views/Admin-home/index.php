@@ -15,7 +15,7 @@
     <header>
       <a href="#">Logo</a>
       <ul>
-        <li><a href="<?= URL_BASE ?>/login">Sair</a></li>
+        <li><a href="<?= URL_BASE ?>/logout">Sair</a></li>
       </ul>
     </header>
     <section class="options">

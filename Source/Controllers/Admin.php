@@ -6,6 +6,16 @@ use Source\Models\User;
 
 class Admin
 {
+    public function __construct()
+    {
+        $url = URL_BASE;
+        if (!$_SESSION["logado"]){
+            header("Location: $url/login");
+        }elseif (!($_SESSION["tipo_user"] == "admin")){
+            header("Location: $url/");
+        }
+    }
+
     public function home(): void
     {
         require __DIR__ . "/../Views/Admin-home/index.php";
